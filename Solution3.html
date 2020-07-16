@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Grade</title>
+</head>
+<body>
+	<script>
+		var num = prompt("Enter the marks","Between 1-100");
+		document.write("Grading using conditional Statements <br>");
+		if(num >= 70 && num <= 100)
+			document.write("Marks are " + num + " and Grade is A");
+		else
+			if(num >=50 && num < 70)
+				document.write("Marks are " + num + " and Grade is B");
+			else
+				if(num >= 30 && num < 50)
+					document.write("Marks are " + num + " and Grade is C");
+				else
+					document.write("Marks are " + num + " and Grade is F");
+		document.write("<br><br> Grading using Switch Statements <br>");
+		switch (num) {
+		  case "0":
+		  case "29":
+			  document.write("Marks are " + num + " and Grade is F");
+		    break;
+		  case "30":
+		  case "49":
+			  document.write("Marks are " + num + " and Grade is C");
+		    break;
+		  case "50":
+		  case "69":
+			  document.write("Marks are " + num + " and Grade is B");
+		    break; 
+		  case "70":
+		  case "100":
+			  document.write("Marks are " + num + " and Grade is A");
+		    break;    
+		  default:
+			  document.write("Number should be between 1-100");
+		    break;  
+		}
+		document.write("<br> <br>Grading using Ternary Operator <br>");
+		var grade = (num >= 70 && num <100) ? "A" : "B";
+		var grade = (num >=50 && num < 70) ? "B" : "C";
+		var grade = (num >=30 && num < 50) ? "C" : "F";
+		document.write("Marks are " + num + " and Grade is " + grade);
+	</script>
+</body>
+</html>
